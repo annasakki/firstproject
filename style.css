@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bbb8f9, #e1fbbe);
+  padding: 10px;
+}
+.todoapp {
+  background: white;
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 40px;
+}
+.todoapp h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todoapp h2 img {
+  height: 50px;
+  margin-left: 10px;
+}
+.entrybar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bbb8f9;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+input {
+  flex: 0.75;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button {
+  background: lightyellow;
+  padding: 16px 50px;
+  color: blue;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background-size: cover;
+  background-image: url(./assets/checkbox-unchecked.svg);
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  border-radius: 5px;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: silver;
+}
+ul li.checked::before {
+  background-image: url(./assets/checkbox-checked.svg);
+  background-color: #bbb8f9;
+}
+/* could also do ul li span */
+span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+span:hover {
+  cursor: pointer;
+  background: #bbb8f9;
+  border-radius: 50%;
+}
