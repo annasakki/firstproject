@@ -17,6 +17,15 @@ const addTask = () => {
     taskbox.value = " ";
     saveData();
 } 
+//function to display the date and time 
+function updateDateTime() {
+    const currentDate = new Date();
+    const dateTimeString = currentDate.toLocaleString(); 
+    document.getElementById('date').textContent = dateTimeString;
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
 // check where the user is clicking on
 tasklist.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){

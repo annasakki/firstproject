@@ -27,6 +27,18 @@
   height: 50px;
   margin-left: 10px;
 }
+.datebox {
+  background: #bbb8f9;
+  height: 35px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: 0;
+  font-size: small;
+  border-radius: 10%;
+}
+.datebox p {
+  color: white;
+}
 .entrybar {
   display: flex;
   align-items: center;
